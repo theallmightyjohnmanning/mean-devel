@@ -16,6 +16,7 @@ app.use(bodyParser.json());
 
 // Setup included directories
 app.use(express.static(__dirname+'/node_modules'));
+app.use(express.static(__dirname+'/controllers'));
 app.use(express.static(__dirname+'/public'));
 
 // Setup available models
@@ -24,11 +25,6 @@ fs.readdirSync(__dirname+'/models').forEach(function(filename) {
     require(__dirname+'/models/'+filename)(db);
   }
 });
-
-db.model('test').find(function(err, tests) {
-  console.log(tests);
-});
-
 
 // Include Routes
 fs.readdirSync(__dirname+'/models').forEach(function(filename) {
