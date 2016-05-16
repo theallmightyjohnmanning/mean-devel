@@ -1,0 +1,29 @@
+{
+  "name": "mean-devel",
+  "version": "0.0.1",
+  "description": "A suitable light weight template for creating MEAN full stack applications.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theallmightyjohnmanning/mean-devel.git"
+  },
+  "keywords": [
+    "MEAN",
+    "mean",
+    "node",
+    "nodejs",
+    "node",
+    "mvc",
+    "MEAN",
+    "mvc"
+  ],
+  "author": "John Manning",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theallmightyjohnmanning/mean-devel/issues"
+  },
+  "homepage": "https://github.com/theallmightyjohnmanning/mean-devel#readme"
+}
