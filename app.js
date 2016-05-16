@@ -19,10 +19,23 @@ app.use(express.static(__dirname+'/node_modules'));
 app.use(express.static(__dirname+'/public'));
 
 // Setup available models
-require('./models')(db);
+fs.readdirSync(__dirname+'/models').forEach(function(filename) {
+  if(~filename.indexOf('.js')) {
+    require(__dirname+'/models/'+filename)(db);
+  }
+});
+
+db.model('test').find(function(err, tests) {
+  console.log(tests);
+});
+
 
 // Include Routes
-require('./routes');
+fs.readdirSync(__dirname+'/models').forEach(function(filename) {
+  if(~filename.indexOf('.js')) {
+    require(__dirname+'/routes/'+filename)(db);
+  }
+});
 
 // Start server
 app.listen(config.server.port, config.server.host);
