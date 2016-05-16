@@ -1,14 +1,12 @@
 {
 	"server": {
-		"host": "vks-devel",
+		"host": "mean-devel",
 		"port": 8000
 	},
 
 	"db": {
 		"host": "127.0.0.1",
 		"port": "27017",
-		"name": "mean-devel",
-		"username": "",
-		"password": ""
+		"name": "mean-devel"
 	}
 }

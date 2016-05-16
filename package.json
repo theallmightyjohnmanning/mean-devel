@@ -25,5 +25,13 @@
   "bugs": {
     "url": "https://github.com/theallmightyjohnmanning/mean-devel/issues"
   },
-  "homepage": "https://github.com/theallmightyjohnmanning/mean-devel#readme"
+  "homepage": "https://github.com/theallmightyjohnmanning/mean-devel#readme",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "body-parser": "^1.15.1",
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
+    "jquery": "^2.2.3",
+    "mongoose": "^4.4.17"
+  }
 }

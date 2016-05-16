@@ -1,0 +1,18 @@
+[Unit]
+Description=[The description that appears when using systemctl]
+
+[Service]
+ExecStart=/usr/bin/node [/path/to/document/root]/app.js
+Restart=on-failure
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=[name-of-service]
+User=nobody
+Group=nobody
+Environment=PORT=8000
+Environment=PATH=/usr/bin/node:/usr/local/bin/node
+Environment=NODE_ENV=production
+WorkingDirectory=[/path/to/document/root]
+
+[Install]
+WantedBy=multi-user.target
