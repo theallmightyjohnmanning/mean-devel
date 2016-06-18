@@ -1,3 +1,5 @@
-module.exports = function() {
-	
+module.exports = function(app) {
+	app.get('/test', function (req, res) {
+	  res.send('Hello World!');
+	});
 }

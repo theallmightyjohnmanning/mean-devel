@@ -27,9 +27,9 @@ fs.readdirSync(__dirname+'/models').forEach(function(filename) {
 });
 
 // Include Routes
-fs.readdirSync(__dirname+'/models').forEach(function(filename) {
+fs.readdirSync(__dirname+'/routes').forEach(function(filename) {
   if(~filename.indexOf('.js')) {
-    require(__dirname+'/routes/'+filename)(db);
+    require(__dirname+'/routes/'+filename)(app);
   }
 });
 
